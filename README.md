@@ -44,11 +44,11 @@ The output (similar to below) will display one or more Subscriptions - with the 
 
 Subscriptions:
 
-NZ-PROD-IT-SUB-01
-NZ-DEV-IT-SUB-01
-NZ-TEST-IT-SUB-01
+NZ-DEV
+NZ-TEST
+NZ-PROD
 
-NZ-CORE-SUB-01
+NZ-CORE
 
 NZ-SBOX-IT-SUB-01
 NETSCOUT Sandbox
