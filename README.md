@@ -63,4 +63,13 @@ $ az account set --subscription="SUBSCRIPTION_ID"
 ```
 
 
+#### Installing a package manager on Windows 10:
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+
+### Installing Terraform uisng the Chocolatey Package Manager:
+```
+choco install terraform -y
+```
 
