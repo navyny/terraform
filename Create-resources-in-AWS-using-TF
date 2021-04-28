@@ -1,0 +1,38 @@
+#configure the provider in main.tf file
+#tF uses HCL langugae
+
+provider "aws" {
+  region = "us-east-2"
+}
+
+
+#general Syntax for TF for adding resources:
+resource "<PROVIDER>_<TYPE>" "<NAME>" {
+ [CONFIG …]
+}
+
+#to add a single server:
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+}
+
+
+--------********-------------
+1)$ terraform init
+      This will download the code for provider(eg:AWS) we specified into .terraform folder
+2)$ terraform plan
+      Plan command lets you see what Terraform will do before actually doing it
+3)$ terraform apply      
+--------********-------------
+
+#Additionally if you want to add a name to the VM use tags:
+
+resource "aws_instance" "example" {
+  ami           = "ami-0c55b159cbfafe1f0"
+  instance_type = "t2.micro"
+  
+  tags = {
+    Name = "terraform-example"
+  }
+}
